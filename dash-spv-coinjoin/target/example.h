@@ -8,4 +8,20 @@
 #include <stdint.h>
 #include <stdlib.h>
 
+struct CoinJoinAcceptMessage {
+    uint32_t denomination;
+    Transaction tx_collateral;
+};
+
+/*
+ # Safety
+ */
+struct CoinJoinAcceptMessage *CoinJoinAcceptMessage_ctor(uint32_t denomination,
+                                                         Transaction *tx_collateral);
+
+/*
+ # Safety
+ */
+void CoinJoinAcceptMessage_destroy(struct CoinJoinAcceptMessage *ffi);
+
 #endif /* example_h */

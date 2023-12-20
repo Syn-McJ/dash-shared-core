@@ -9,7 +9,7 @@ mod fermented;
 mod keys;
 mod masternode;
 mod tx;
-mod coinjoin;
+// mod coinjoin;
 
 #[cfg(test)]
 mod tests;
